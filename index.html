@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./style.css" rel="stylesheet" /> 
+  <title>Solar</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header>
+      <img src="./javascript.svg" alt="logo" />
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#solar-system">Solar System</a>
+          </li>
+          <li class="nav-item">
+            <a href="#fact">Fact</a>
+          </li>
+          <li class="nav-item">
+            <a href="#images">Image Gallery</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section id="hero">
+        <h1>Welcome to Solar!</h1>
+        <p>Your guide to our solar system</p>
+      </section>
+      <section id="solar-system">
+        <h2>Our Solar System</h2>
+        <div id="solar-system-cards">
+        </div>
+      </section>
+      <section id="fact">
+        <h2>One Random Fact</h2>
+        <p id="one-random-fact"></p>
+      </section>
+      <section id="images">
+        <h2>Some Cool Images</h2>
+        <div id="image-gallery"></div>
+      </section>
+    </main>
+
+    <footer>
+      Developed by
+      <a href="https://ankitvashisht.netlify.app" target="_blank" rel="noreferrer">Ankit Vashisht</a>
+      for Udacity Frontend ND Project
+    </footer>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
