@@ -1,8 +1,3 @@
-// import "./style.css";
-// import javascriptLogo from "./javascript.svg";
-// import viteLogo from "/vite.svg";
-// import { setupCounter } from "./counter.js";
-
 const planets = [
   {
     name: "Mercury",
@@ -136,4 +131,11 @@ const facts = [
 const randomFact = facts?.[Math.round(Math.random() * 10)] ?? facts[0];
 document.querySelector("#one-random-fact").textContent = randomFact;
 
-
+document.querySelector("#image-gallery").innerHTML = Array.from({ length: 6 })
+  .map(
+    (_, index) =>
+      `<img class="img_in_gallery" width="400px" src="/img_${
+        index + 1
+      }.jpg" alt="solar system image ${index}" />`
+  )
+  .join("");
