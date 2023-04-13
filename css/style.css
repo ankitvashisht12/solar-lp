@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+.card {
+  padding: 2em;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-item {
+  padding: 1rem;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background: url("/solar.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#hero h1 {
+  font-size: 2rem;
+}
+
+#solar-system {
+  padding: 1rem;
+}
+
+section > h2 {
+  text-align: center;
+  padding: 2rem;
+  text-decoration: underline;
+}
+
+#solar-system-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+#solar-system-cards > .card {
+  text-align: center;
+  border: 1px solid white;
+}
+
+#solar-system-cards > .card:hover {
+  transform: scale(102%);
+}
+
+#images {
+  padding: 1rem;
+}
+
+#image-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#fact {
+  padding: 1rem;
+  text-align: center;
+}
+
+#one-random-fact {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  #hero > h1 {
+    font-size: 2.5rem;
+  }
+  #hero > p {
+    font-size: 1.2rem;
+  }
+
+  #solar-system-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #image-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 760px) {
+  #hero > h1 {
+    font-size: 3rem;
+  }
+  #hero > p {
+    font-size: 1.5rem;
+  }
+  #solar-system-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #hero > h1 {
+    font-size: 3.5rem;
+  }
+  #hero > p {
+    font-size: 1.8rem;
+  }
+  #solar-system-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #image-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  #hero {
+    color: white;
+  }
+}
