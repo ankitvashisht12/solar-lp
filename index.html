@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./style.css" rel="stylesheet" /> 
+  <link href="./css/style.css" rel="stylesheet" /> 
   <title>Solar</title>
 </head>
 
@@ -15,38 +15,38 @@
       <img src="./javascript.svg" alt="logo" />
       <nav>
         <ul>
-          <li class="nav-item">
-            <a href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#solar-system">Solar System</a>
-          </li>
-          <li class="nav-item">
-            <a href="#fact">Fact</a>
-          </li>
-          <li class="nav-item">
-            <a href="#images">Image Gallery</a>
-          </li>
+          <!-- <li class="nav-item"> -->
+          <!--   <a href="#">Home</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+          <!--   <a href="#solar-system">Solar System</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+          <!--   <a href="#fact">Fact</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+          <!--   <a href="#images">Image Gallery</a> -->
+          <!-- </li> -->
         </ul>
       </nav>
     </header>
 
     <!-- Main -->
     <main>
-      <section id="hero">
+      <section id="hero" data-nav="Home">
         <h1>Welcome to Solar!</h1>
         <p>Your guide to our solar system</p>
       </section>
-      <section id="solar-system">
+      <section id="solar-system" data-nav="Solar System">
         <h2>Our Solar System</h2>
         <div id="solar-system-cards">
         </div>
       </section>
-      <section id="fact">
+      <section id="fact" data-nav="Fact">
         <h2>One Random Fact</h2>
         <p id="one-random-fact"></p>
       </section>
-      <section id="images">
+      <section id="images" data-nav="Images">
         <h2>Some Cool Images</h2>
         <div id="image-gallery"></div>
       </section>
@@ -58,7 +58,7 @@
       for Udacity Frontend ND Project
     </footer>
   </div>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="/js/app.js"></script>
 </body>
 
 </html>
