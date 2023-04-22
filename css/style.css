@@ -79,7 +79,16 @@ nav > ul {
 }
 
 .nav-item {
-  padding: 1rem;
+  padding: 0.5rem 1rem ;
+  border-radius: 8px;
+}
+
+.nav-item:hover {
+  border: 1px solid #e2e2e2;
+}
+
+.nav-item.active {
+  background: #e2e2e2;
 }
 
 #hero {
@@ -100,6 +109,10 @@ nav > ul {
 
 #solar-system {
   padding: 1rem;
+}
+
+section {
+  min-height: 100vh;
 }
 
 section > h2 {
