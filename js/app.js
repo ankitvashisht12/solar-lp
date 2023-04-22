@@ -140,18 +140,92 @@ document.querySelector("#image-gallery").innerHTML = Array.from({ length: 6 })
   )
   .join("");
 
-
 // Building navigation dynamically from sections
-const allSections = document.querySelectorAll("section")
-let navHTML = ""
+const allSections = document.querySelectorAll("section");
+let navList = document.createElement("ul");
 
 // iterate over node list of all sections
-for(let section of allSections) {
-  const navItem = section.getAttribute("data-nav")
-  const href = section.getAttribute("id")
+for (let section of allSections) {
+  const navItemName = section.getAttribute("data-nav");
+  const href = section.getAttribute("id");
 
-  navHTML += `<li class="nav-item">
-      <a href="#${href}">${navItem}</a>
-    </li>`
+  // create individual nav item
+  const navItem = document.createElement("li");
+  navItem.classList.add("nav-item");
+
+  // create anchor link for each nav item
+  const anchorLink = document.createElement("a");
+  anchorLink.setAttribute("href", `#${href}`);
+  anchorLink.textContent = navItemName;
+  navItem.appendChild(anchorLink);
+
+  // add onclick event handler to newly created navItem
+  navItem.addEventListener("click", smoothScroll);
+
+  // append newly created nav item into nav list(aka ul)
+  navList.appendChild(navItem);
 }
-document.querySelector("nav > ul").innerHTML = navHTML
+document.querySelector("nav").appendChild(navList);
+
+// smooth scroll
+function smoothScroll(e) {
+  e.preventDefault();
+
+  const allListItems = document.querySelectorAll("nav ul li");
+
+  for (const listItem of allListItems) {
+    listItem.classList.remove("active");
+  }
+
+  const href = this.firstElementChild.getAttribute("href");
+  this.classList.add("active");
+  console.log("smoothScroll", { href });
+  const scrollIntoViewOptions = {
+    behavior: "smooth",
+  };
+  document.querySelector(href).scrollIntoView(scrollIntoViewOptions);
+}
+
+document.addEventListener("scroll", scrollInView);
+let timer = null
+
+// method to know which section is in view
+function scrollInView(e) {
+  e.preventDefault();
+
+  if(timer) {
+    clearTimeout(timer)
+    document.querySelector("header").style.display = "flex"
+  }
+
+  timer = setTimeout(() => {
+    // hide navbar
+    document.querySelector("header").style.display = "none"
+  }, 1000)
+
+
+  for (let section of allSections) {
+    if (isSectionInView(section)) {
+      section.classList.add("active");
+      document
+        .querySelector(`nav ul li a[href='#${section.getAttribute("id")}']`)
+        .parentNode.classList.add("active");
+    } else {
+      section.classList.remove("active");
+      document
+        .querySelector(`nav ul li a[href='#${section.getAttribute("id")}']`)
+        .parentNode.classList.remove("active");
+    }
+  }
+}
+
+function isSectionInView(section) {
+  const { right, bottom } = section.getBoundingClientRect();
+  return (
+    right >= 0 &&
+    bottom >= 0 &&
+    right <= (window.innerWidth || document.documentElement.clientWidth) &&
+    bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
