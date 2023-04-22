@@ -1,24 +1,19 @@
-## Utilites
-- [ ] Make sure that the navigation bar is responsive too across all these devices.
+# Solar
 
-## Extras
-- [ ] Move all the assets like image into public folder
-- [ ] Install ESLint
+A website for kids for Learning about solar system.
 
-## Styling
-- [ ] Styling should be added for active states.
-- [ ] Set CSS class active state when the element is in the viewport.
-- [ ] The active section in the Navbar should be highlighted.
+## Key Features
 
-## Navigation
-- [x] Navigation is built dynamically (using section's data-* information) as an unordered list. 
+- Info about planets
+- Cool Image Gallery
+- One random fact
 
-## Section Active State
-- [ ] It should be clear which section is being viewed while scrolling through the page.
+## Info about project
 
-## Scroll to Anchor
-- [ ] When clicking an item from the navigation menu, the link should scroll to the appropriate section.
+This project uses vite to easily spin up server
 
+```bash
+npm run dev
+```
 
-
-
+and then press `o` to open the site in default browser.
