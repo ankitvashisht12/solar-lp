@@ -134,7 +134,7 @@ document.querySelector("#one-random-fact").textContent = randomFact;
 document.querySelector("#image-gallery").innerHTML = Array.from({ length: 6 })
   .map(
     (_, index) =>
-      `<img class="img_in_gallery" width="400px" src="/img_${
+      `<img class="img_in_gallery" width="400px" src="../assets/img_${
         index + 1
       }.jpg" alt="solar system image ${index}" />`
   )
@@ -171,12 +171,6 @@ document.querySelector("nav").appendChild(navList);
 function smoothScroll(e) {
   e.preventDefault();
 
-  const allListItems = document.querySelectorAll("nav ul li");
-
-  for (const listItem of allListItems) {
-    listItem.classList.remove("active");
-  }
-
   const href = this.firstElementChild.getAttribute("href");
   this.classList.add("active");
   console.log("smoothScroll", { href });
@@ -201,7 +195,7 @@ function scrollInView(e) {
   timer = setTimeout(() => {
     // hide navbar
     document.querySelector("header").style.display = "none"
-  }, 1000)
+  }, 1500)
 
 
   for (let section of allSections) {
