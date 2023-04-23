@@ -1,3 +1,11 @@
+/*
+ * There are 4 sections on this webpage
+ * Home
+ * Explore
+ * Fact
+ * Image Gallery
+ */
+
 const planets = [
   {
     name: "Mercury",
