@@ -97,7 +97,7 @@ const planets = [
   },
 ];
 
-// <img src="${imageUrl}" alt="${name}" />
+// add all the planets dynamically in Explore section
 const html = planets
   .map(
     ({ imageUrl = "", name, type, moons, surfaceTemperature }) => `
@@ -142,7 +142,7 @@ document.querySelector("#image-gallery").innerHTML = Array.from({ length: 6 })
 
 // Building navigation dynamically from sections
 const allSections = document.querySelectorAll("section");
-let navList = document.createElement("ul");
+let navList = document.querySelector("nav ul");
 
 // iterate over node list of all sections
 for (let section of allSections) {
