@@ -69,6 +69,7 @@ header {
   padding: 1rem;
   width: 100%;
   background-color: #242424;
+  z-index: 100000;
 }
 
 nav > ul {
@@ -81,6 +82,7 @@ nav > ul {
 .nav-item {
   padding: 0.5rem 1rem ;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .nav-item:hover {
@@ -97,7 +99,7 @@ nav > ul {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background: url("/solar.gif");
+  background: url("../assets/solar.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
