@@ -134,7 +134,7 @@ document.querySelector("#one-random-fact").textContent = randomFact;
 document.querySelector("#image-gallery").innerHTML = Array.from({ length: 6 })
   .map(
     (_, index) =>
-      `<img class="img_in_gallery" width="400px" src="../assets/img_${
+      `<img class="img_in_gallery" width="400px" src="./assets/img_${
         index + 1
       }.jpg" alt="solar system image ${index}" />`
   )
